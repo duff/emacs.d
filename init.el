@@ -40,6 +40,7 @@
 (require 'evil)
 (evil-mode 1)
 
+(global-evil-visualstar-mode 1)
 (global-evil-leader-mode)
 (evil-leader/set-leader ",")
 
@@ -64,6 +65,12 @@
 (define-key evil-normal-state-map "gl" 'move-end-of-line)
 (define-key evil-normal-state-map "gh" 'back-to-indentation)
 
+(define-key evil-normal-state-map (kbd "j") 'evil-next-visual-line)
+(define-key evil-normal-state-map (kbd "k") 'evil-previous-visual-line)
+
+(setq scroll-margin 5
+scroll-conservatively 9999
+scroll-step 1)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -133,3 +140,4 @@
   (interactive)
   (save-some-buffers t))
 (add-hook 'focus-out-hook 'save-all)
+
