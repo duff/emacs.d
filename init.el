@@ -41,7 +41,7 @@
 (evil-leader/set-leader ",")
 
 (evil-leader/set-key
-  "w"  'save-buffer
+  "w" 'save-buffer
   "v" 'split-window-right
   "s" 'split-window-below
   "d" 'neotree-toggle
@@ -89,3 +89,9 @@
 ))
 
 
+; Remember the cursor position of files when reopening them
+(setq-default save-place t)
+(require 'saveplace)
+
+;; show the column number in the status bar
+(column-number-mode t)
