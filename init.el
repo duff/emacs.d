@@ -76,16 +76,25 @@
 (modify-syntax-entry (string-to-char "_") "w" ruby-mode-syntax-table)
 (modify-syntax-entry (string-to-char "_") "w" elixir-mode-syntax-table)
 
+;; Remove noise from neotree
+(setq neo-show-updir-line nil)
+(setq neo-banner-message nil)
+(setq neo-theme 'arrow)
+(setq neo-mode-line-type 'none)
+(setq neo-window-width 30)
+
+
 (add-hook 'neotree-mode-hook
  (lambda ()
    (define-key evil-normal-state-local-map (kbd "TAB") 'neotree-enter)
    (define-key evil-normal-state-local-map (kbd "SPC") 'neotree-enter)
    (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
    (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)
-	 (define-key evil-normal-state-local-map (kbd "ma") 'neotree-create-node)
-	 (define-key evil-normal-state-local-map (kbd "md") 'neotree-delete-node)
-	 (define-key evil-normal-state-local-map (kbd "r") 'neotree-refresh)
-	 (define-key evil-normal-state-local-map (kbd "mm") 'neotree-rename-node)
+   (define-key evil-normal-state-local-map (kbd "ma") 'neotree-create-node)
+   (define-key evil-normal-state-local-map (kbd "md") 'neotree-delete-node)
+   (define-key evil-normal-state-local-map (kbd "r") 'neotree-refresh)
+   (define-key evil-normal-state-local-map (kbd "mm") 'neotree-rename-node)
+   (define-key evil-normal-state-local-map (kbd "I") 'neotree-hidden-file-toggle)
 ))
 
 
@@ -95,3 +104,7 @@
 
 ;; show the column number in the status bar
 (column-number-mode t)
+
+(set-frame-font "Inconsolata-dz 11")
+
+
