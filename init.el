@@ -7,7 +7,6 @@
 
 (package-initialize)
 
-
 ;; Refresh the package descriptions
 (unless package-archive-contents
   (package-refresh-contents))
@@ -134,8 +133,7 @@ scroll-step 1)
 (setq-default save-place t)
 (require 'saveplace)
 
-;; show the column number in the status bar
-(column-number-mode t)
+ 
 
 (set-frame-font "Inconsolata-dz 11")
 
@@ -143,9 +141,7 @@ scroll-step 1)
 (show-paren-mode t)
 (setq show-paren-delay 0)
 
-;; Highlight trailing whitespace
-(setq-default show-trailing-whitespace t)
-
+(setq-default show-trailing-whitespace t)      ;; Highlight trailing whitespace
 
 ;; Save all files when focus is lost
 (defun save-all ()
@@ -174,7 +170,7 @@ scroll-step 1)
     (when (get-buffer "*Completions*") (delete-windows-on "*Completions*"))
     (abort-recursive-edit)))
 
-;;; esc quits all the things
+;; esc quits all the things
 (define-key evil-normal-state-map [escape] 'keyboard-quit)
 (define-key evil-visual-state-map [escape] 'keyboard-quit)
 (define-key minibuffer-local-map [escape] 'minibuffer-keyboard-quit)
@@ -184,4 +180,10 @@ scroll-step 1)
 (define-key minibuffer-local-isearch-map [escape] 'minibuffer-keyboard-quit)
 
 (evil-commentary-mode)
+(global-linum-mode t)            ; Show line numbers
+(setq-default truncate-lines t)  ; Don't word wrap
+(column-number-mode t)           ; show the column number in the status bar
 
+(set-face-background 'linum "#1c1c1c")
+(set-face-foreground 'linum "#787C81")
+(set-face-background 'fringe "Black")
