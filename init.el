@@ -21,7 +21,7 @@
 (setq inhibit-startup-screen t)
 (setq ns-use-native-fullscreen nil)
 
-(add-to-list 'default-frame-alist '(height . 53))
+(add-to-list 'default-frame-alist '(height . 49))
 (add-to-list 'default-frame-alist '(width . 178))
 
 (global-set-key (kbd "<s-return>") 'toggle-frame-fullscreen)
@@ -46,11 +46,16 @@
   "s" 'split-window-below
   "d" 'neotree-toggle
   "n" 'neotree-find
+  "q" 'kill-buffer
   )
 
 (require 'key-chord)(key-chord-mode 1)
 (key-chord-define evil-insert-state-map ";;" 'evil-normal-state)
 (key-chord-define evil-visual-state-map ";;" 'evil-change-to-previous-state)
+
+(define-key evil-normal-state-map "gl" 'move-end-of-line)
+(define-key evil-normal-state-map "gh" 'back-to-indentation)
+
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -107,4 +112,7 @@
 
 (set-frame-font "Inconsolata-dz 11")
 
+;; Fix up parens
+(show-paren-mode t)
+(setq show-paren-delay 0)
 
