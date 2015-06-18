@@ -40,6 +40,8 @@
   "w"  'save-buffer
   "v" 'split-window-right
   "s" 'split-window-below
+  "d" 'neotree-toggle
+  "n" 'neotree-find
   )
 
 (require 'key-chord)(key-chord-mode 1)
@@ -69,3 +71,17 @@
 
 (modify-syntax-entry (string-to-char "_") "w" ruby-mode-syntax-table)
 (modify-syntax-entry (string-to-char "_") "w" elixir-mode-syntax-table)
+
+(add-hook 'neotree-mode-hook
+ (lambda ()
+   (define-key evil-normal-state-local-map (kbd "TAB") 'neotree-enter)
+   (define-key evil-normal-state-local-map (kbd "SPC") 'neotree-enter)
+   (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
+   (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)
+	 (define-key evil-normal-state-local-map (kbd "ma") 'neotree-create-node)
+	 (define-key evil-normal-state-local-map (kbd "md") 'neotree-delete-node)
+	 (define-key evil-normal-state-local-map (kbd "r") 'neotree-refresh)
+	 (define-key evil-normal-state-local-map (kbd "mm") 'neotree-rename-node)
+))
+
+
