@@ -44,6 +44,9 @@
 (global-evil-leader-mode)
 (evil-leader/set-leader ",")
 
+(require 'evil-surround)
+(global-evil-surround-mode 1)
+
 (evil-leader/set-key
   "w" 'save-buffer
   "v" 'split-window-right
