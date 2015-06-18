@@ -63,3 +63,9 @@
  )
 
 (set-background-color "black")
+
+(require 'elixir-mode)
+(require 'ruby-mode)
+
+(modify-syntax-entry (string-to-char "_") "w" ruby-mode-syntax-table)
+(modify-syntax-entry (string-to-char "_") "w" elixir-mode-syntax-table)
