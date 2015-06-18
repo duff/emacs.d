@@ -55,6 +55,7 @@
   "d" 'neotree-toggle
   "n" 'neotree-find
   "q" 'kill-buffer
+  "q" (kbd ":q")
   "h" 'delete-trailing-whitespace
   "f" 'projectile-find-file
   "c" (lambda() (interactive)(find-file "~/.emacs.d/init.el"))
@@ -72,6 +73,12 @@
 
 (define-key evil-normal-state-map (kbd "j") 'evil-next-visual-line)
 (define-key evil-normal-state-map (kbd "k") 'evil-previous-visual-line)
+
+(require 'evil-matchit)
+(global-evil-matchit-mode 1)
+
+(define-key evil-normal-state-map (kbd "SPC") 'evilmi-jump-items)
+
 
 (setq scroll-margin 5
 scroll-conservatively 9999
@@ -175,3 +182,6 @@ scroll-step 1)
 (define-key minibuffer-local-completion-map [escape] 'minibuffer-keyboard-quit)
 (define-key minibuffer-local-must-match-map [escape] 'minibuffer-keyboard-quit)
 (define-key minibuffer-local-isearch-map [escape] 'minibuffer-keyboard-quit)
+
+(evil-commentary-mode)
+
