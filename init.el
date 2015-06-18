@@ -43,6 +43,7 @@
 (global-evil-visualstar-mode 1)
 (global-evil-leader-mode)
 (evil-leader/set-leader ",")
+(projectile-global-mode)
 
 (require 'evil-surround)
 (global-evil-surround-mode 1)
@@ -55,6 +56,7 @@
   "n" 'neotree-find
   "q" 'kill-buffer
   "h" 'delete-trailing-whitespace
+  "f" 'projectile-find-file
   "c" (lambda() (interactive)(find-file "~/.emacs.d/init.el"))
   )
 
@@ -143,4 +145,18 @@ scroll-step 1)
   (interactive)
   (save-some-buffers t))
 (add-hook 'focus-out-hook 'save-all)
+
+(require 'flx-ido)
+(ido-mode 1)
+(ido-everywhere 1)
+(flx-ido-mode 1)
+
+(setq ido-decorations (quote ("\n↪ "     "" "\n   " "\n   ..." "[" "]" " [No match]" " [Matched]" " [Not readable]" " [Too big]" " [Confirm]")))
+
+;; Map ctrl-j/k to up down in ido selections
+(add-hook 'ido-setup-hook
+  (lambda ()
+    (define-key ido-completion-map (kbd "C-j") 'ido-next-match)
+    (define-key ido-completion-map (kbd "C-k") 'ido-prev-match)
+))
 
