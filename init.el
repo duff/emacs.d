@@ -34,6 +34,9 @@
 (setq savehist-additional-variables '(search-ring regexp-search-ring))
 (savehist-mode 1)
 
+;; Make ctrl-u work correctly
+(setq evil-want-C-u-scroll t)
+
 (require 'evil)
 (evil-mode 1)
 
@@ -47,9 +50,14 @@
   "d" 'neotree-toggle
   "n" 'neotree-find
   "q" 'kill-buffer
+  "h" 'delete-trailing-whitespace
+  "c" (lambda() (interactive)(find-file "~/.emacs.d/init.el"))
   )
 
-(require 'key-chord)(key-chord-mode 1)
+(require 'key-chord)
+(key-chord-mode 1)
+
+;; Improved escape
 (key-chord-define evil-insert-state-map ";;" 'evil-normal-state)
 (key-chord-define evil-visual-state-map ";;" 'evil-change-to-previous-state)
 
@@ -116,3 +124,12 @@
 (show-paren-mode t)
 (setq show-paren-delay 0)
 
+;; Highlight trailing whitespace
+(setq-default show-trailing-whitespace t)
+
+
+;; Save all files when focus is lost
+(defun save-all ()
+  (interactive)
+  (save-some-buffers t))
+(add-hook 'focus-out-hook 'save-all)
