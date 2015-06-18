@@ -55,6 +55,7 @@
   "n" 'neotree-find
   "q" 'kill-buffer
   "q" (kbd ":q")
+  "x" (kbd ":wq")
   "h" 'delete-trailing-whitespace
   "f" 'projectile-find-file
   "c" (lambda() (interactive)(find-file "~/.emacs.d/init.el"))
@@ -183,6 +184,7 @@ scroll-step 1)
 (global-linum-mode t)            ; Show line numbers
 (setq-default truncate-lines t)  ; Don't word wrap
 (column-number-mode t)           ; show the column number in the status bar
+(blink-cursor-mode 0)            ; Turn off cursor blinking
 
 (set-face-background 'linum "#1c1c1c")
 (set-face-foreground 'linum "#787C81")
