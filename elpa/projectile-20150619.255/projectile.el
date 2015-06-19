@@ -4,7 +4,7 @@
 
 ;; Author: Bozhidar Batsov <bozhidar@batsov.com>
 ;; URL: https://github.com/bbatsov/projectile
-;; Package-Version: 20150610.2247
+;; Package-Version: 20150619.255
 ;; Keywords: project, convenience
 ;; Version: 0.13.0-cvs
 ;; Package-Requires: ((dash "1.5.0") (pkg-info "0.4"))
@@ -554,10 +554,10 @@ The cache is created both in memory and on the hard drive."
 (defun projectile-cache-current-file ()
   "Add the currently visited file to the cache."
   (interactive)
-  (let* ((current-project (projectile-project-root))
-         (abs-current-file (buffer-file-name (current-buffer)))
-         (current-file (file-relative-name abs-current-file current-project)))
+  (let ((current-project (projectile-project-root)))
     (when (gethash (projectile-project-root) projectile-projects-cache)
+      (let* ((abs-current-file (file-truename (buffer-file-name (current-buffer))))
+            (current-file (file-relative-name abs-current-file current-project)))
       (unless (or (projectile-file-cached-p current-file current-project)
                   (projectile-ignored-directory-p (file-name-directory abs-current-file))
                   (projectile-ignored-file-p abs-current-file))
@@ -567,7 +567,7 @@ The cache is created both in memory and on the hard drive."
         (projectile-serialize-cache)
         (message "File %s added to project %s cache."
                  (propertize current-file 'face 'font-lock-keyword-face)
-                 (propertize current-project 'face 'font-lock-keyword-face))))))
+                 (propertize current-project 'face 'font-lock-keyword-face)))))))
 
 ;; cache opened files automatically to reduce the need for cache invalidation
 (defun projectile-cache-files-find-file-hook ()
