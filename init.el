@@ -1,3 +1,4 @@
+
 (require 'package)
 
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
@@ -28,6 +29,7 @@
 (global-set-key (kbd "C-h")  'windmove-left)
 (global-set-key (kbd "C-k")  'windmove-up)
 (global-set-key (kbd "C-j")  'windmove-down)
+
 
 ;; Save histories
 (setq savehist-additional-variables '(search-ring regexp-search-ring))
@@ -87,6 +89,12 @@
 
 (define-key evil-normal-state-map (kbd "j") 'evil-next-visual-line)
 (define-key evil-normal-state-map (kbd "k") 'evil-previous-visual-line)
+
+(global-company-mode t)
+(define-key evil-insert-state-map (kbd "S-SPC") 'company-complete)
+
+;; Don't automatically show auto complete
+(setq company-idle-delay nil)
 
 (require 'evil-matchit)
 (global-evil-matchit-mode 1)
@@ -154,7 +162,7 @@ scroll-step 1)
 (setq-default save-place t)
 (require 'saveplace)
 
- 
+
 
 (set-frame-font "Inconsolata-dz 11")
 
@@ -263,5 +271,3 @@ scroll-step 1)
       (concat (powerline-render lhs)
 	      (powerline-fill mode-line (powerline-width rhs))
 	      (powerline-render rhs))))))
-
-
