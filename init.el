@@ -93,8 +93,13 @@
 (global-company-mode t)
 (define-key evil-insert-state-map (kbd "S-SPC") 'company-complete)
 
-;; Don't automatically show auto complete
-(setq company-idle-delay nil)
+
+(setq company-idle-delay nil)           ;; Don't automatically show auto complete
+(setq company-tooltip-limit 12)         ;; Make it a longer list
+(setq company-selection-wrap-around t)  ;; Get back to the top
+
+(define-key company-active-map (kbd "C-j") 'company-select-next)
+(define-key company-active-map (kbd "C-k") 'company-select-previous)
 
 (require 'evil-matchit)
 (global-evil-matchit-mode 1)
