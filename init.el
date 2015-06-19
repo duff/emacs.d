@@ -43,7 +43,7 @@
 (global-evil-leader-mode)
 (evil-leader/set-leader ",")
 (evil-jumper-mode)
-
+(add-hook 'projectile-mode-hook 'projectile-rails-on)
 (projectile-global-mode)
 
 (setq projectile-sort-order (quote recently-active))            ;; Show projectile lists by most recently active
