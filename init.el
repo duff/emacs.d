@@ -42,10 +42,13 @@
 (global-evil-visualstar-mode 1)
 (global-evil-leader-mode)
 (evil-leader/set-leader ",")
+
 (projectile-global-mode)
 
-;; Show projectile lists by most recently active
-(setq projectile-sort-order (quote recently-active))
+(setq projectile-sort-order (quote recently-active))            ;; Show projectile lists by most recently active
+(setq projectile-enable-caching t)
+(setq projectile-project-root-files
+      (quote ("Gemfile" "package.json" "gulpfile.js" "Gruntfile.js" "mix.exs" "README.md")))
 
 (require 'evil-surround)
 (global-evil-surround-mode 1)
@@ -61,6 +64,7 @@
   "x" (kbd ":wq")
   "h" 'delete-trailing-whitespace
   "f" 'projectile-find-file
+  "F" (lambda() (interactive)(projectile-find-file "t"))
   "b" 'ido-switch-buffer
   "c" (lambda() (interactive)(find-file "~/.emacs.d/init.el"))
   )
@@ -83,7 +87,6 @@
 
 (define-key evil-normal-state-map (kbd "SPC") 'evilmi-jump-items)
 
-
 (setq scroll-margin 5
 scroll-conservatively 9999
 scroll-step 1)
@@ -96,10 +99,8 @@ scroll-step 1)
  '(custom-enabled-themes (quote (sanityinc-solarized-dark)))
  '(custom-safe-themes
    (quote
-    ("4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default)))
- '(projectile-project-root-files
-   (quote
-    ("Gemfile" "package.json" "gulpfile.js" "Gruntfile.js" "mix.exs" "README.md"))))
+    ("4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default))))
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
