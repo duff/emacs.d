@@ -4,7 +4,7 @@
 
 ;; Author: Bozhidar Batsov <bozhidar@batsov.com>
 ;; URL: https://github.com/bbatsov/projectile
-;; Package-Version: 20150619.255
+;; Package-Version: 20150619.800
 ;; Keywords: project, convenience
 ;; Version: 0.13.0-cvs
 ;; Package-Requires: ((dash "1.5.0") (pkg-info "0.4"))
@@ -853,7 +853,8 @@ function is executing."
                        '("." ".." ".svn" ".cvs")))
      (progress-reporter-update progress-reporter)
      (if (file-directory-p it)
-         (unless (projectile-ignored-directory-p it)
+         (unless (projectile-ignored-directory-p
+                  (file-name-as-directory it))
            (projectile-index-directory it patterns progress-reporter))
        (unless (projectile-ignored-file-p it)
          (list it))))

@@ -68,6 +68,7 @@
   "f" 'projectile-find-file
   "b" 'ido-switch-buffer
   "e" 'uno-email-mode
+  "t" 'toggle-to-previous-buffer
   "F" (lambda() (interactive)(projectile-find-file "t"))
   "c" (lambda() (interactive)(find-file "~/.emacs.d/init.el"))
   )
@@ -180,6 +181,12 @@ scroll-step 1)
 (set-face-background 'linum "#1c1c1c")
 (set-face-foreground 'linum "#787C81")
 (set-face-background 'fringe "Black")
+
+(defun buffer-exists (bufname)   (not (eq nil (get-buffer bufname))))
+(defun toggle-to-previous-buffer ()
+  (interactive)
+  (if (buffer-exists "*Ibuffer*")  (kill-buffer "*Ibuffer*"))
+  (switch-to-buffer (other-buffer (current-buffer) 1)))
 
 (defun uno-email-mode ()
   (interactive)
