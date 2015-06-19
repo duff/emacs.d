@@ -93,6 +93,13 @@
 
 (define-key evil-normal-state-map (kbd "SPC") 'evilmi-jump-items)
 
+(require 'evil-args)
+(setq evil-args-delimiters (quote (",")))
+
+(define-key evil-inner-text-objects-map "," 'evil-inner-arg)
+(define-key evil-outer-text-objects-map "," 'evil-outer-arg)
+
+
 (setq scroll-margin 5
 scroll-conservatively 9999
 scroll-step 1)
@@ -103,9 +110,7 @@ scroll-step 1)
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes (quote (sanityinc-solarized-dark)))
- '(custom-safe-themes
-   (quote
-    ("4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default))))
+ '(custom-safe-themes (quote ("4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -179,6 +184,7 @@ scroll-step 1)
 (setq-default truncate-lines t)  ; Don't word wrap
 (column-number-mode t)           ; show the column number in the status bar
 (blink-cursor-mode 0)            ; Turn off cursor blinking
+
 
 (set-face-background 'linum "#1c1c1c")
 (set-face-foreground 'linum "#787C81")
@@ -256,4 +262,5 @@ scroll-step 1)
       (concat (powerline-render lhs)
 	      (powerline-fill mode-line (powerline-width rhs))
 	      (powerline-render rhs))))))
+
 
