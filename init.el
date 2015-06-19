@@ -66,8 +66,9 @@
   "A" 'ag-regexp-project-at-point
   "a" 'ag-regexp-project-sans-point
   "f" 'projectile-find-file
-  "F" (lambda() (interactive)(projectile-find-file "t"))
   "b" 'ido-switch-buffer
+  "e" 'uno-email-mode
+  "F" (lambda() (interactive)(projectile-find-file "t"))
   "c" (lambda() (interactive)(find-file "~/.emacs.d/init.el"))
   )
 
@@ -137,6 +138,7 @@ scroll-step 1)
    (define-key evil-normal-state-local-map (kbd "r") 'neotree-refresh)
    (define-key evil-normal-state-local-map (kbd "mm") 'neotree-rename-node)
    (define-key evil-normal-state-local-map (kbd "I") 'neotree-hidden-file-toggle)
+   (define-key evil-normal-state-local-map (kbd "C") 'neotree-change-root)
 ))
 
 
@@ -179,6 +181,13 @@ scroll-step 1)
 (set-face-foreground 'linum "#787C81")
 (set-face-background 'fringe "Black")
 
+(defun uno-email-mode ()
+  (interactive)
+  (find-file "~/tmp/email.txt")
+  (mail-mode)
+  (linum-mode -1)
+  (writeroom-mode t)
+  )
 
 (defun minibuffer-keyboard-quit ()
   (interactive)
