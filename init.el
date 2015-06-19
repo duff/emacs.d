@@ -42,6 +42,7 @@
 (global-evil-visualstar-mode 1)
 (global-evil-leader-mode)
 (evil-leader/set-leader ",")
+(evil-jumper-mode)
 
 (projectile-global-mode)
 
@@ -66,6 +67,7 @@
   "A" 'ag-regexp-project-at-point
   "a" 'ag-regexp-project-sans-point
   "f" 'projectile-find-file
+  "p" 'projectile-switch-project
   "b" 'ido-switch-buffer
   "e" 'uno-email-mode
   "t" 'toggle-to-previous-buffer
