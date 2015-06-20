@@ -1,4 +1,3 @@
-
 (require 'package)
 
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
@@ -20,6 +19,8 @@
 
 (setq inhibit-startup-screen t)
 (setq ns-use-native-fullscreen nil)
+
+(setq ruby-insert-encoding-magic-comment nil)  ;; No magic #coding utf-8 line
 
 (add-to-list 'default-frame-alist '(height . 49))
 (add-to-list 'default-frame-alist '(width . 178))
@@ -87,8 +88,16 @@
 (define-key evil-normal-state-map "gl" 'move-end-of-line)
 (define-key evil-normal-state-map "gh" 'back-to-indentation)
 
+;; Help with long lines
 (define-key evil-normal-state-map (kbd "j") 'evil-next-visual-line)
 (define-key evil-normal-state-map (kbd "k") 'evil-previous-visual-line)
+
+;; Bubble lines
+(define-key evil-normal-state-map (kbd "M-k") (kbd "ddkP"))
+(define-key evil-normal-state-map (kbd "M-j") (kbd "ddp"))
+(define-key evil-visual-state-map (kbd "M-k") (kbd "xkP`[V`]"))
+(define-key evil-visual-state-map (kbd "M-j") (kbd "xp`[V`]"))
+
 
 (global-company-mode t)
 (define-key evil-insert-state-map (kbd "S-SPC") 'company-complete)
