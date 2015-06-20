@@ -66,7 +66,7 @@
   "q" 'kill-buffer
   "q" (kbd ":q")
   "x" (kbd ":wq")
-  "h" 'delete-trailing-whitespace
+  "h" 'delete-trailing-whitespace	;
   "A" 'ag-regexp-project-at-point
   "a" 'ag-regexp-project-sans-point
   "f" 'projectile-find-file
@@ -74,13 +74,20 @@
   "b" 'ido-switch-buffer
   "e" 'uno-email-mode
   "t" 'toggle-to-previous-buffer
+  "RET" 'add-enter
   "SPC" (lambda() (interactive)(insert (kbd "<SPC>")))
-  "F" (lambda() (interactive)(projectile-find-file "t"))
-  "c" (lambda() (interactive)(find-file "~/.emacs.d/init.el"))
+  "F"   (lambda() (interactive)(projectile-find-file "t"))
+  "c"   (lambda() (interactive)(find-file "~/.emacs.d/init.el"))
   )
 
 (require 'key-chord)
 (key-chord-mode 1)
+
+(defun add-enter ()
+  (interactive)
+  (evil-beginning-of-visual-line)
+  (newline)
+  (back-to-indentation))
 
 ;; Improved escape
 (key-chord-define evil-insert-state-map ";;" 'evil-normal-state)
