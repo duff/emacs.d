@@ -66,7 +66,7 @@
   "q" 'kill-buffer
   "q" (kbd ":q")
   "x" (kbd ":wq")
-  "h" 'delete-trailing-whitespace	;
+  "h" 'delete-trailing-whitespace
   "A" 'ag-regexp-project-at-point
   "a" 'ag-regexp-project-sans-point
   "f" 'projectile-find-file
