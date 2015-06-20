@@ -139,15 +139,18 @@ scroll-step 1)
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(cursor-in-non-selected-windows nil)
  '(custom-enabled-themes (quote (sanityinc-solarized-dark)))
- '(custom-safe-themes (quote ("4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default))))
+ '(custom-safe-themes
+   (quote
+    ("4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(cursor ((t (:background "alternateSelectedControlColor")))))
 
 (set-background-color "black")
 
@@ -210,10 +213,10 @@ scroll-step 1)
 
 
 (evil-commentary-mode)
-(global-linum-mode t)            ; Show line numbers
-(setq-default truncate-lines t)  ; Don't word wrap
-(column-number-mode t)           ; show the column number in the status bar
-(blink-cursor-mode 0)            ; Turn off cursor blinking
+(global-linum-mode t)                     ; Show line numbers
+(setq-default truncate-lines t)           ; Don't word wrap
+(column-number-mode t)                    ; show the column number in the status bar
+(blink-cursor-mode 0)                     ; Turn off cursor blinking
 
 
 (set-face-background 'linum "#1c1c1c")
