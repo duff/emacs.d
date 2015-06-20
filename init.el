@@ -74,6 +74,7 @@
   "b" 'ido-switch-buffer
   "e" 'uno-email-mode
   "t" 'toggle-to-previous-buffer
+  "SPC" (lambda() (interactive)(insert (kbd "<SPC>")))
   "F" (lambda() (interactive)(projectile-find-file "t"))
   "c" (lambda() (interactive)(find-file "~/.emacs.d/init.el"))
   )
