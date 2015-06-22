@@ -31,7 +31,7 @@
   (visual-line-mode t)
   (linum-mode -1)
   (flyspell-mode t)
-  (setq writeroom-width 80)
+  (setq writeroom-width 70)
   (writeroom-mode t)
   )
 
