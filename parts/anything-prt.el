@@ -12,6 +12,7 @@
 (setq evil-want-C-u-scroll t)           ;; Make ctrl-u work correctly
 (global-auto-revert-mode t)             ;; Revert buffers automatically when underlying files are changed
 (setq-default indent-tabs-mode nil)     ;; Prevent extraneous tabs
+(setq auto-save-default nil)            ;; Don't auto save
 (defalias 'yes-or-no-p 'y-or-n-p)       ;; Enable y/n answers
 
 ;; Save histories
@@ -44,5 +45,6 @@
 (add-hook 'focus-out-hook (lambda() (interactive)(save-some-buffers "t")))
 
 (smex-initialize)
+
 
 (provide 'anything-prt)
