@@ -12,6 +12,8 @@
 
 (require 'custom-prt)
 (require 'anything-prt)
+(require 'key-bindings-prt)
+(require 'status-line-prt)
 
 (provide 'init)
 
