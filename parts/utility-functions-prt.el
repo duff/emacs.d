@@ -28,8 +28,9 @@
   (interactive)
   (find-file "~/tmp/email.txt")
   (mail-mode)
-  (visual-line-mode)
+  (visual-line-mode t)
   (linum-mode -1)
+  (flyspell-mode t)
   (writeroom-mode t)
   )
 
