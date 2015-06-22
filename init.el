@@ -187,15 +187,21 @@ scroll-step 1)
 (setq-default save-place t)
 (require 'saveplace)
 
-
-
 (set-frame-font "Inconsolata-dz 11")
 
 ;; Fix up parens
 (show-paren-mode t)
 (setq show-paren-delay 0)
+(smartparens-global-mode t)
+
+;; Don't higlight the paren / quote area
+(setq sp-highlight-pair-overlay nil)
+(setq sp-highlight-wrap-overlay nil)
+(setq sp-highlight-wrap-tag-overlay nil)
+
 
 (setq-default show-trailing-whitespace t)      ;; Highlight trailing whitespace
+(setq make-backup-files nil)                   ;; No backup files please
 
 (require 'flx-ido)
 (ido-mode 1)
@@ -267,8 +273,8 @@ scroll-step 1)
 (defun save-all ()
   (interactive)
   (save-some-buffers t))
-(add-hook 'focus-out-hook 'save-all)
 
+(add-hook 'focus-out-hook 'save-all)
 
 (require 'powerline)
 (setq-default
