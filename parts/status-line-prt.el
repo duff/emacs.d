@@ -1,5 +1,8 @@
 (require 'powerline)
 
+; show the column number in the status bar
+(column-number-mode t)
+
 (setq-default
  mode-line-format
  '("%e"
