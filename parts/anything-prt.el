@@ -10,7 +10,7 @@
 (setq make-backup-files nil)            ;; No backup files please
 (setq-default save-place t)             ;; Remember the cursor positions
 (setq evil-want-C-u-scroll t)           ;; Make ctrl-u work correctly
-(setq make-backup-files nil)            ;; No backup files.
+(global-auto-revert-mode t)             ;; Revert buffers automatically when underlying files are changed
 
 ;; Save histories
 (setq savehist-additional-variables '(search-ring regexp-search-ring))
