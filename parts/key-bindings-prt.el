@@ -4,6 +4,7 @@
 (global-set-key (kbd "C-k")  'windmove-up)
 (global-set-key (kbd "C-j")  'windmove-down)
 
+(global-set-key (kbd "M-x") 'smex)   ;; use smex
 
 (evil-leader/set-key
   "w" 'save-buffer

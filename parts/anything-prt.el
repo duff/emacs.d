@@ -43,4 +43,6 @@
 
 (add-hook 'focus-out-hook (lambda() (interactive)(save-some-buffers "t")))
 
+(smex-initialize)
+
 (provide 'anything-prt)
