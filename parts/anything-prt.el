@@ -11,6 +11,8 @@
 (setq-default save-place t)             ;; Remember the cursor positions
 (setq evil-want-C-u-scroll t)           ;; Make ctrl-u work correctly
 (global-auto-revert-mode t)             ;; Revert buffers automatically when underlying files are changed
+(fset 'yes-or-no-p 'y-or-n-p)           ;; Enable y/n answers
+(setq-default indent-tabs-mode nil)     ;; Prevent extraneous tabs
 
 ;; Save histories
 (setq savehist-additional-variables '(search-ring regexp-search-ring))
