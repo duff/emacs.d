@@ -23,3 +23,4 @@
 (depends-on "ruby-mode")
 (depends-on "smartparens")
 (depends-on "writeroom-mode")
+(depends-on "yaml-mode")
