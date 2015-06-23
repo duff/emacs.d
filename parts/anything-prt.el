@@ -25,11 +25,12 @@
 (add-hook 'projectile-mode-hook 'projectile-rails-on)
 
 (setq projectile-enable-caching t)                      ;; Cache the things
-(setq projectile-sort-order (quote recently-active))    ;; Show projectile lists by most recently active
 (setq projectile-idle-timer-seconds 60)                 ;; Regnerate tags when idle
 (setq projectile-project-root-files
       (quote ("Gemfile" "package.json" "gulpfile.js" "Gruntfile.js" "mix.exs" "README.md")))
 
+
+(setq etags-select-no-select-for-one-match t)    ;; Don't confirm if only one match
 
 (setq evil-args-delimiters (quote (",")))
 

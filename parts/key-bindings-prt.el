@@ -53,7 +53,7 @@
 (define-key evil-normal-state-map (kbd "C-u") 'evil-scroll-up)
 (define-key evil-visual-state-map (kbd "C-u") 'evil-scroll-up)
 
-(define-key evil-normal-state-map (kbd "C-\\") '(lambda() (interactive)(find-tag (find-tag-default))))
+(define-key evil-normal-state-map (kbd "C-\\") 'etags-select-find-tag-at-point)
 
 ;; Jump to matching parens
 (define-key evil-normal-state-map (kbd "SPC") 'evilmi-jump-items)
