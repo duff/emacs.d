@@ -49,6 +49,9 @@
 
 (define-key evil-insert-state-map (kbd "S-SPC") 'dabbrev-expand)
 
+;; Make ctrl-u behave correctly
+(define-key evil-normal-state-map (kbd "C-u") 'evil-scroll-up)
+(define-key evil-visual-state-map (kbd "C-u") 'evil-scroll-up)
 
 (define-key evil-normal-state-map (kbd "C-\\") '(lambda() (interactive)(find-tag (find-tag-default))))
 
