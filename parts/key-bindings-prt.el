@@ -57,6 +57,7 @@
 
 ;; Jump to matching parens
 (define-key evil-normal-state-map (kbd "SPC") 'evilmi-jump-items)
+(define-key evil-visual-state-map (kbd "SPC") 'evilmi-jump-items)
 
 ;; Make an arg text object act like a comma object
 (define-key evil-inner-text-objects-map "," 'evil-inner-arg)
