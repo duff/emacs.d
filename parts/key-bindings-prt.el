@@ -47,11 +47,8 @@
 (define-key evil-visual-state-map (kbd "M-k") (kbd "xkP`[V`]"))
 (define-key evil-visual-state-map (kbd "M-j") (kbd "xp`[V`]"))
 
-(define-key evil-insert-state-map (kbd "S-SPC") 'company-complete)
+(define-key evil-insert-state-map (kbd "S-SPC") 'dabbrev-expand)
 
-;; Move up down in auto complete
-(define-key company-active-map (kbd "C-j") 'company-select-next)
-(define-key company-active-map (kbd "C-k") 'company-select-previous)
 
 (define-key evil-normal-state-map (kbd "C-\\") '(lambda() (interactive)(find-tag (find-tag-default))))
 

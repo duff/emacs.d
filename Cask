@@ -2,7 +2,6 @@
 (source melpa)
 
 (depends-on "ag")
-(depends-on "company")
 (depends-on "color-theme-sanityinc-solarized")
 (depends-on "elixir-mode")
 (depends-on "etags-select")

@@ -3,9 +3,6 @@
 (evil-leader/set-leader ",")
 (global-evil-jumper-mode)
 
-(setq company-idle-delay nil)           ;; Don't automatically show auto complete
-(setq company-tooltip-limit 12)         ;; Make it a longer list
-(setq company-selection-wrap-around t)  ;; Get back to the top
 (setq ring-bell-function 'ignore)       ;; Quiet please
 (setq make-backup-files nil)            ;; No backup files please
 (setq-default save-place t)             ;; Remember the cursor positions
@@ -15,6 +12,8 @@
 (setq auto-save-default nil)            ;; Don't auto save
 (setq tags-case-fold-search nil)        ;; Make tags case sensitive
 (setq evil-jumper-max-length 500)       ;; Remember more jumps
+(setq dabbrev-case-fold-search nil)     ;; Make auto complete case sensitive
+(setq dabbrev-check-other-buffers nil)  ;; Only look in current buffer for auto complete
 (defalias 'yes-or-no-p 'y-or-n-p)       ;; Enable y/n answers
 
 ;; Save histories
@@ -28,8 +27,6 @@
 (setq projectile-project-root-files
       (quote ("Gemfile" "package.json" "gulpfile.js" "Gruntfile.js" "mix.exs" "README.md")))
 
-
-(global-company-mode t)
 
 (setq evil-args-delimiters (quote (",")))
 
