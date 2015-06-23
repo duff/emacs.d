@@ -13,6 +13,7 @@
 (global-auto-revert-mode t)             ;; Revert buffers automatically when underlying files are changed
 (setq-default indent-tabs-mode nil)     ;; Prevent extraneous tabs
 (setq auto-save-default nil)            ;; Don't auto save
+(setq tags-case-fold-search nil)        ;; Make tags case sensitive
 (defalias 'yes-or-no-p 'y-or-n-p)       ;; Enable y/n answers
 
 ;; Save histories

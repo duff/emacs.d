@@ -53,6 +53,8 @@
 (define-key company-active-map (kbd "C-j") 'company-select-next)
 (define-key company-active-map (kbd "C-k") 'company-select-previous)
 
+(define-key evil-normal-state-map (kbd "C-\\") '(lambda() (interactive)(find-tag (find-tag-default))))
+
 ;; Jump to matching parens
 (define-key evil-normal-state-map (kbd "SPC") 'evilmi-jump-items)
 
