@@ -14,6 +14,7 @@
 (setq dabbrev-case-fold-search nil)       ;; Make auto complete case sensitive
 (setq dabbrev-check-other-buffers nil)    ;; Only look in current buffer for auto complete
 (setq large-file-warning-threshold nil)   ;; Stop bothering me about large files.  Just open them.
+(setq tags-revert-without-query 1)        ;; Automatically reload the tags file
 (defalias 'yes-or-no-p 'y-or-n-p)         ;; Enable y/n answers
 
 ;; Save histories
