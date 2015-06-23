@@ -1,7 +1,7 @@
 (global-evil-visualstar-mode 1)
 (global-evil-leader-mode)
 (evil-leader/set-leader ",")
-(evil-jumper-mode)
+(global-evil-jumper-mode)
 
 (setq company-idle-delay nil)           ;; Don't automatically show auto complete
 (setq company-tooltip-limit 12)         ;; Make it a longer list
@@ -14,6 +14,7 @@
 (setq-default indent-tabs-mode nil)     ;; Prevent extraneous tabs
 (setq auto-save-default nil)            ;; Don't auto save
 (setq tags-case-fold-search nil)        ;; Make tags case sensitive
+(setq evil-jumper-max-length 500)       ;; Remember more jumps
 (defalias 'yes-or-no-p 'y-or-n-p)       ;; Enable y/n answers
 
 ;; Save histories
