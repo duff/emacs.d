@@ -49,5 +49,7 @@
 
 (smex-initialize)
 
+;; Allow this Emacs process to be a server for client processes.
+(server-start)
 
 (provide 'anything-prt)

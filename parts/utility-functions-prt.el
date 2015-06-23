@@ -38,16 +38,11 @@
 (defun scratch-ruby-mode ()
   (interactive)
   (find-file "~/tmp/ruby-scratch.rb")
-  (linum-mode -1)
-  (writeroom-mode t)
   )
 
 (defun scratch-bash-mode ()
   (interactive)
   (find-file "~/tmp/bash-scratch.sh")
-  (linum-mode -1)
-  (setq writeroom-width 120)
-  (writeroom-mode t)
   )
 
 (provide 'utility-functions-prt)

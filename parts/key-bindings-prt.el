@@ -34,8 +34,8 @@
 (key-chord-define evil-insert-state-map ";;" 'evil-normal-state)
 (key-chord-define evil-visual-state-map ";;" 'evil-change-to-previous-state)
 
-(define-key evil-normal-state-map "gl" 'move-end-of-line)
-(define-key evil-normal-state-map "gh" 'back-to-indentation)
+(define-key evil-normal-state-map "gl" (kbd "g_"))
+(define-key evil-normal-state-map "gh" (kbd "^"))
 
 ;; Help with long lines
 (define-key evil-normal-state-map (kbd "j") 'evil-next-visual-line)
