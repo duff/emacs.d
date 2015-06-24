@@ -16,7 +16,6 @@
 (setq large-file-warning-threshold nil)   ;; Stop bothering me about large files.  Just open them.
 (setq tags-revert-without-query 1)        ;; Automatically reload the tags file
 (setq evil-flash-delay 0.4)               ;; Highlight searches for less time
-(defalias 'yes-or-no-p 'y-or-n-p)         ;; Enable y/n answers
 
 ;; Save histories
 (setq savehist-additional-variables '(search-ring regexp-search-ring))
@@ -47,6 +46,8 @@
 (setq ruby-insert-encoding-magic-comment nil)  ;; No magic #coding utf-8 line
 
 (add-hook 'focus-out-hook (lambda() (interactive)(save-some-buffers "t")))
+
+(defalias 'yes-or-no-p 'y-or-n-p)
 
 (smex-initialize)
 

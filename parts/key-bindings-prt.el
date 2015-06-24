@@ -8,8 +8,8 @@
 
 (evil-leader/set-key
   "w" 'save-buffer
-  "v" 'split-window-right
-  "s" 'split-window-below
+  "v" 'split-window-right-and-focus
+  "s" 'split-window-below-and-focus
   "d" 'neotree-toggle
   "n" 'neotree-find
   "q" 'kill-buffer
@@ -103,6 +103,6 @@
 (define-key minibuffer-local-completion-map [escape] 'minibuffer-keyboard-quit)
 (define-key minibuffer-local-must-match-map [escape] 'minibuffer-keyboard-quit)
 (define-key minibuffer-local-isearch-map [escape] 'minibuffer-keyboard-quit)
-
+ 
 
 (provide 'key-bindings-prt)

@@ -45,4 +45,18 @@
   (find-file "~/tmp/bash-scratch.sh")
   )
 
+(defun split-window-below-and-focus ()
+  "Split the window vertically and focus the new window."
+  (interactive)
+  (split-window-below)
+  (windmove-down)
+  )
+
+(defun split-window-right-and-focus ()
+  "Split the window horizontally and focus the new window."
+  (interactive)
+  (split-window-right)
+  (windmove-right)
+  )
+
 (provide 'utility-functions-prt)
