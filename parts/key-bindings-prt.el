@@ -58,7 +58,11 @@
 
 ;; Make ctrl-u behave correctly
 (define-key evil-normal-state-map (kbd "C-u") 'evil-scroll-up)
-(define-key evil-visual-state-map (kbd "C-u") 'evil-scroll-up)
+(define-key evil-visual-state-map (kbd "C-x") 'evil-scroll-up)
+
+;; Handle numbers correctly
+(define-key evil-normal-state-map (kbd "C-a") 'evil-numbers/inc-at-pt)
+(define-key evil-normal-state-map (kbd "C-x") 'evil-numbers/dec-at-pt)
 
 (define-key evil-normal-state-map (kbd "C-\\") 'etags-select-find-tag-at-point)
 

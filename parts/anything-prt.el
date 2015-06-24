@@ -15,6 +15,7 @@
 (setq dabbrev-check-other-buffers nil)    ;; Only look in current buffer for auto complete
 (setq large-file-warning-threshold nil)   ;; Stop bothering me about large files.  Just open them.
 (setq tags-revert-without-query 1)        ;; Automatically reload the tags file
+(setq evil-flash-delay 0.4)               ;; Highlight searches for less time
 (defalias 'yes-or-no-p 'y-or-n-p)         ;; Enable y/n answers
 
 ;; Save histories

@@ -10,6 +10,7 @@
 (depends-on "evil-commentary")
 (depends-on "evil-jumper")
 (depends-on "evil-leader")
+(depends-on "evil-numbers")
 (depends-on "evil-matchit")
 (depends-on "evil-surround")
 (depends-on "evil-visualstar")
