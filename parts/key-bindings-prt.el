@@ -47,6 +47,13 @@
 (define-key evil-visual-state-map (kbd "M-k") (kbd "xkP`[V`]"))
 (define-key evil-visual-state-map (kbd "M-j") (kbd "xp`[V`]"))
 
+
+
+;; (define-key evil-visual-state-map (kbd "p") (kbd "\"ax\"2P"))
+;; (define-key evil-visual-state-map (kbd "p") (kbd "\"\"P"))
+
+
+
 (define-key evil-insert-state-map (kbd "S-SPC") 'dabbrev-expand)
 
 ;; Make ctrl-u behave correctly
