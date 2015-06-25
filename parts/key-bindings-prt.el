@@ -4,7 +4,13 @@
 (global-set-key (kbd "C-k")  'windmove-up)
 (global-set-key (kbd "C-j")  'windmove-down)
 
-(global-set-key (kbd "M-x") 'smex)   ;; use smex
+
+(global-set-key (kbd "<C-right>")  'evil-window-increase-width)
+(global-set-key (kbd "<C-left>")  'evil-window-decrease-width)
+(global-set-key (kbd "<C-up>")  'evil-window-increase-height)
+(global-set-key (kbd "<C-down>")  'evil-window-decrease-height)
+
+(global-set-key (kbd "M-x") 'smex)
 
 (evil-leader/set-key
   "w" 'save-buffer
@@ -22,7 +28,6 @@
   "p" 'projectile-switch-project
   "b" 'ido-switch-buffer
   "e" 'uno-email-mode
-  "t" 'toggle-to-previous-buffer
   "RET" 'add-enter
   "SPC" (lambda() (interactive)(insert (kbd "<SPC>")))
   "F"   (lambda() (interactive)(projectile-find-file "t"))
@@ -34,8 +39,10 @@
 (key-chord-define evil-insert-state-map ";;" 'evil-normal-state)
 (key-chord-define evil-visual-state-map ";;" 'evil-change-to-previous-state)
 
-(define-key evil-normal-state-map "gl" (kbd "g_"))
-(define-key evil-normal-state-map "gh" (kbd "^"))
+(define-key evil-normal-state-map "gl" (kbd "g_"))    ;; Get to end of line
+(define-key evil-normal-state-map "gh" (kbd "^"))     ;; Get to first non-blank char of line
+
+(define-key evil-normal-state-map "go" 'toggle-to-previous-buffer)
 
 ;; Help with long lines
 (define-key evil-normal-state-map (kbd "j") 'evil-next-visual-line)
