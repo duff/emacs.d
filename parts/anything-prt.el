@@ -16,6 +16,7 @@
 (setq large-file-warning-threshold nil)   ;; Stop bothering me about large files.  Just open them.
 (setq tags-revert-without-query 1)        ;; Automatically reload the tags file
 (setq evil-flash-delay 0.4)               ;; Highlight searches for less time
+(setq neo-create-file-auto-open t)        ;; Auto open new file
 
 ;; Save histories
 (setq savehist-additional-variables '(search-ring regexp-search-ring))
