@@ -43,6 +43,8 @@
 (define-key evil-normal-state-map "gh" (kbd "^"))     ;; Get to first non-blank char of line
 
 (define-key evil-normal-state-map "go" 'toggle-to-previous-buffer)
+(define-key evil-normal-state-map "gp" (lambda() (interactive)(persp-switch (persp-name persp-last))))
+
 
 ;; Help with long lines
 (define-key evil-normal-state-map (kbd "j") 'evil-next-visual-line)
