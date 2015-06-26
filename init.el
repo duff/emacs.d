@@ -17,8 +17,8 @@
 (require 'key-bindings-prt)
 (require 'utility-functions-prt)
 (require 'status-line-prt)
+(require 'project-prt)
 (require 'writer-prt)
 
 (provide 'init)
-
 

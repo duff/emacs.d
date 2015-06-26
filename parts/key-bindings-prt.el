@@ -4,11 +4,12 @@
 (global-set-key (kbd "C-k")  'windmove-up)
 (global-set-key (kbd "C-j")  'windmove-down)
 
-
 (global-set-key (kbd "<C-right>")  'evil-window-increase-width)
 (global-set-key (kbd "<C-left>")  'evil-window-decrease-width)
 (global-set-key (kbd "<C-up>")  'evil-window-increase-height)
 (global-set-key (kbd "<C-down>")  'evil-window-decrease-height)
+
+(global-set-key (kbd "<M-tab>")  'persp-next)
 
 (global-set-key (kbd "M-x") 'smex)
 

@@ -5,10 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(cursor-in-non-selected-windows nil)
  '(custom-enabled-themes (quote (sanityinc-solarized-dark)))
- '(custom-safe-themes
-   (quote
-    ("4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default)))
- '(projectile-sort-order (quote recentf)))
+ '(custom-safe-themes (quote ("4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
