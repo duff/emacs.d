@@ -28,7 +28,6 @@
 (depends-on "rainbow-mode")
 (depends-on "ruby-mode")
 (depends-on "sass-mode")
-(depends-on "smartparens")
 (depends-on "smex")
 (depends-on "writeroom-mode")
 (depends-on "yaml-mode")

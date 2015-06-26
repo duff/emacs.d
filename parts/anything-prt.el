@@ -29,8 +29,6 @@
 (modify-syntax-entry (string-to-char "_") "w" ruby-mode-syntax-table)
 (modify-syntax-entry (string-to-char "_") "w" elixir-mode-syntax-table)
 
-(smartparens-global-mode t)
-
 (evil-commentary-mode)
 
 (setq ag-reuse-window 't)
