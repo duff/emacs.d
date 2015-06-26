@@ -20,6 +20,7 @@
   "d" 'neotree-toggle
   "n" 'neotree-find
   "q" 'kill-buffer
+  "g" 'browse-at-remote
   "q" (kbd ":q")
   "x" (kbd ":wq")
   "h" 'delete-trailing-whitespace

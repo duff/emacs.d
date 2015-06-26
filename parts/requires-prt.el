@@ -22,6 +22,7 @@
 (require 'ruby-mode)
 (require 'saveplace)
 (require 'ag)
+(require 'browse-at-remote)
 
 
 (provide 'requires-prt)
