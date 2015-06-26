@@ -25,7 +25,7 @@
   "A" 'ag-regexp-project-at-point
   "a" 'ag-regexp-project-sans-point
   "f" 'projectile-find-file
-  "p" 'projectile-switch-project
+  "p" 'projectile-persp-switch-project
   "b" 'ido-switch-buffer
   "e" 'uno-email-mode
   "RET" 'add-enter

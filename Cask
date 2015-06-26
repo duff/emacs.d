@@ -20,6 +20,8 @@
 (depends-on "key-chord")
 (depends-on "markdown-mode")
 (depends-on "neotree")
+(depends-on "perspective")
+(depends-on "persp-projectile")
 (depends-on "powerline")
 (depends-on "projectile")
 (depends-on "projectile-rails")
