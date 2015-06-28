@@ -47,6 +47,8 @@
 (define-key evil-normal-state-map "go" 'toggle-to-previous-buffer)
 (define-key evil-normal-state-map "gp" (lambda() (interactive)(persp-switch (persp-name persp-last))))
 
+;; e is a text object for the entire buffer
+(define-key evil-outer-text-objects-map "e" 'mark-whole-buffer)
 
 ;; Help with long lines
 (define-key evil-normal-state-map (kbd "j") 'evil-next-visual-line)
