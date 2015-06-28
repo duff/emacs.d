@@ -1,7 +1,3 @@
-(global-evil-visualstar-mode 1)
-(global-evil-leader-mode)
-(evil-leader/set-leader ",")
-(global-evil-jumper-mode)
 
 (setq ring-bell-function 'ignore)         ;; Quiet please
 (setq make-backup-files nil)              ;; No backup files please
@@ -10,12 +6,10 @@
 (setq-default indent-tabs-mode nil)       ;; Prevent extraneous tabs
 (setq auto-save-default nil)              ;; Don't auto save
 (setq tags-case-fold-search nil)          ;; Make tags case sensitive
-(setq evil-jumper-max-length 500)         ;; Remember more jumps
 (setq dabbrev-case-fold-search nil)       ;; Make auto complete case sensitive
 (setq dabbrev-check-other-buffers nil)    ;; Only look in current buffer for auto complete
 (setq large-file-warning-threshold nil)   ;; Stop bothering me about large files.  Just open them.
 (setq tags-revert-without-query 1)        ;; Automatically reload the tags file
-(setq evil-flash-delay 0.4)               ;; Highlight searches for less time
 (setq neo-create-file-auto-open t)        ;; Auto open new file
 
 ;; Save histories
@@ -24,12 +18,8 @@
 
 (setq etags-select-no-select-for-one-match t)    ;; Don't confirm if only one match
 
-(setq evil-args-delimiters (quote (",")))
-
 (modify-syntax-entry (string-to-char "_") "w" ruby-mode-syntax-table)
 (modify-syntax-entry (string-to-char "_") "w" elixir-mode-syntax-table)
-
-(evil-commentary-mode)
 
 (setq ag-reuse-window 't)
 
@@ -44,13 +34,5 @@
 ;; Allow this Emacs process to be a server for client processes.
 (server-start)
 
-;; Stop adjusting clipboard with visual selection
-;; Allows one to copy from another app and paste over a visual selection
-(defadvice evil-visual-update-x-selection (around clobber-x-select-text activate)
-  (fset 'old-x-select-text (symbol-function 'x-select-text))
-  (fmakunbound 'x-select-text)
-  ad-do-it
-  (fset 'x-select-text (symbol-function 'old-x-select-text)))
 
-
-(provide 'anything-prt)
+(provide 'misc-prt)
