@@ -30,10 +30,11 @@
   "p" 'projectile-persp-switch-project
   "b" 'ido-switch-buffer
   "e" 'uno-email-mode
+  "1" 'previous-error
+  "2" 'next-error
   "RET" 'add-enter
   "SPC" (lambda() (interactive)(insert (kbd "<SPC>")))
   "F"   (lambda() (interactive)(projectile-find-file "t"))
-  "c"   (lambda() (interactive)(find-file "~/.emacs.d/init.el"))
   )
 
 
