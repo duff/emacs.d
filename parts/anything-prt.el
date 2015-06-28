@@ -44,4 +44,13 @@
 ;; Allow this Emacs process to be a server for client processes.
 (server-start)
 
+;; Stop adjusting clipboard with visual selection
+;; Allows one to copy from another app and paste over a visual selection
+(defadvice evil-visual-update-x-selection (around clobber-x-select-text activate)
+  (fset 'old-x-select-text (symbol-function 'x-select-text))
+  (fmakunbound 'x-select-text)
+  ad-do-it
+  (fset 'x-select-text (symbol-function 'old-x-select-text)))
+
+
 (provide 'anything-prt)
