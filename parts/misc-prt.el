@@ -16,7 +16,8 @@
 (setq savehist-additional-variables '(search-ring regexp-search-ring))
 (savehist-mode 1)
 
-(setq etags-select-no-select-for-one-match t)    ;; Don't confirm if only one match
+(setq-default ispell-program-name "/usr/local/bin/aspell")   ;; Ensure flyspell doesn't get confused
+(setq etags-select-no-select-for-one-match t)                ;; Don't confirm if only one match
 
 (modify-syntax-entry (string-to-char "_") "w" ruby-mode-syntax-table)
 (modify-syntax-entry (string-to-char "_") "w" elixir-mode-syntax-table)
