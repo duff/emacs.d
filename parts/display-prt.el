@@ -26,6 +26,7 @@ scroll-step 1)
 (setq neo-theme 'arrow)
 (setq neo-mode-line-type 'none)
 (setq neo-window-width 30)
+(setq neo-modern-sidebar t)
 
 ;; Fix up parens
 (show-paren-mode t)
