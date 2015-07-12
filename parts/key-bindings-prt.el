@@ -33,6 +33,19 @@
   "1" 'previous-error
   "2" 'next-error
   "RET" 'add-enter
+
+  ",l" (lambda() (interactive)(projectile-find-file-in "lib/"))
+  ",m" (lambda() (interactive)(projectile-find-file-in "models/"))
+  ",v" (lambda() (interactive)(projectile-find-file-in "views/"))
+  ",c" (lambda() (interactive)(projectile-find-file-in "controllers/"))
+  ",h" (lambda() (interactive)(projectile-find-file-in "helpers/"))
+  ",t" (lambda() (interactive)(projectile-find-file-in "test/"))
+  ",r" (lambda() (interactive)(projectile-find-file-in "spec/"))
+  ",p" (lambda() (interactive)(projectile-find-file-in "presenters/"))
+  ",o" (lambda() (interactive)(projectile-find-file-in "source/"))
+  ",j" (lambda() (interactive)(projectile-find-file-in "javascripts/"))
+  ",s" (lambda() (interactive)(projectile-find-file-in "stylesheets/"))
+
   "SPC" (lambda() (interactive)(insert (kbd "<SPC>")))
   "F"   (lambda() (interactive)(projectile-find-file "t"))
   )

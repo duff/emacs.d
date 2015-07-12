@@ -68,6 +68,15 @@
   (neotree-find)
   )
 
+(defun projectile-find-file-in (&optional prefix)
+  (interactive)
+  (let ((file (projectile-completing-read "Find file: "
+                                          (projectile-current-project-files)
+                                          prefix)))
+    (find-file (expand-file-name file (projectile-project-root)))
+    (run-hooks 'projectile-find-file-hook)))
+
+
 (defun split-window-below-and-focus ()
   "Split the window vertically and focus the new window."
   (interactive)
