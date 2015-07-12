@@ -61,6 +61,13 @@
   (find-file "~/tmp/bash-scratch.sh")
   )
 
+(defun neotree-show-then-find ()
+  "Opening it first helps to keep the directory where it is."
+  (interactive)
+  (neo-global--open)
+  (neotree-find)
+  )
+
 (defun split-window-below-and-focus ()
   "Split the window vertically and focus the new window."
   (interactive)
