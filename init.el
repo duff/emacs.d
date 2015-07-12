@@ -15,10 +15,10 @@
 (require 'requires-prt)
 (require 'evil-prt)
 (require 'misc-prt)
-(require 'key-bindings-prt)
 (require 'utility-functions-prt)
 (require 'status-line-prt)
 (require 'project-prt)
+(require 'key-bindings-prt)
 
 (provide 'init)
 
