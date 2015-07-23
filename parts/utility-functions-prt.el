@@ -26,7 +26,7 @@
 
 (defun uno-email-mode ()
   (interactive)
-  (find-file "~/tmp/email.txt")
+  (find-file "~/code/scratch/email.txt")
   (mail-mode)
   (visual-line-mode t)
   (linum-mode -1)
@@ -51,15 +51,6 @@
   (visual-line-mode -1)
   (flyspell-mode -1))
 
-(defun scratch-ruby-mode ()
-  (interactive)
-  (find-file "~/tmp/ruby-scratch.rb")
-  )
-
-(defun scratch-bash-mode ()
-  (interactive)
-  (find-file "~/tmp/bash-scratch.sh")
-  )
 
 (defun neotree-show-then-find ()
   "Opening it first helps to keep the directory where it is."
@@ -90,5 +81,8 @@
   (split-window-right)
   (windmove-right)
   )
+
+(fset 'reply-to-email-in-clipboard
+   [?v ?a ?e ?p ?g ?g ?\C-v ?G ?I ?> ?  escape ?v ?a ?e ?g ?q ?, ?h ?g ?g])
 
 (provide 'utility-functions-prt)

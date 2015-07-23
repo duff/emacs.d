@@ -30,6 +30,7 @@
   "p" 'projectile-persp-switch-project
   "b" 'ido-switch-buffer
   "e" 'uno-email-mode
+  "E" 'reply-to-email-in-clipboard
   "1" 'previous-error
   "2" 'next-error
   "RET" 'add-enter
@@ -128,3 +129,6 @@
 
 
 (provide 'key-bindings-prt)
+
+
+
