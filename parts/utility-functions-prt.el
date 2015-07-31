@@ -35,6 +35,16 @@
   (flyspell-mode t)
   (flyspell-buffer))
 
+(defun uno-email-mode-off ()
+  (interactive)
+  (mail-mode)
+  (visual-line-mode -1)
+  (visual-line-mode -1)
+  (linum-mode t)
+  (writeroom-mode -1)
+  (flyspell-mode -1))
+
+
 (defun prose-mode-on ()
   (interactive)
   (markdown-mode)
