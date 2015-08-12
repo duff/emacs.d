@@ -92,6 +92,13 @@
   (windmove-right)
   )
 
+(defun neotree-projectile-switcheroo ()
+  "Switch to a new project - update neotree and then do the default"
+  (interactive)
+  (neotree-projectile-action)
+  (projectile-find-file)
+  )
+
 (fset 'reply-to-email-in-clipboard
    [?v ?a ?e ?p ?g ?g ?\C-v ?G ?I ?> ?  escape ?v ?a ?e ?g ?q ?, ?h ?g ?g])
 

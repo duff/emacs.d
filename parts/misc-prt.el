@@ -24,6 +24,8 @@
 
 (setq ag-reuse-window 't)
 
+(setq projectile-switch-project-action 'neotree-projectile-switcheroo)
+
 (setq ruby-insert-encoding-magic-comment nil)  ;; No magic #coding utf-8 line
 
 (add-hook 'focus-out-hook (lambda() (interactive)(save-some-buffers "t")))
