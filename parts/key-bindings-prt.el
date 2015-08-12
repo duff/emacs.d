@@ -55,6 +55,7 @@
 ;; Improved escape
 (key-chord-define evil-insert-state-map ";;" 'evil-normal-state)
 (key-chord-define evil-visual-state-map ";;" 'evil-change-to-previous-state)
+(key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
 
 (define-key evil-normal-state-map "gl" (kbd "g_"))    ;; Get to end of line
 (define-key evil-normal-state-map "gh" (kbd "^"))     ;; Get to first non-blank char of line
@@ -105,6 +106,7 @@
    (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)
    (define-key evil-normal-state-local-map (kbd "ma") 'neotree-create-node)
    (define-key evil-normal-state-local-map (kbd "md") 'neotree-delete-node)
+   (define-key evil-normal-state-local-map (kbd "mc") 'neotree-copy-node)
    (define-key evil-normal-state-local-map (kbd "r") 'neotree-refresh)
    (define-key evil-normal-state-local-map (kbd "mm") 'neotree-rename-node)
    (define-key evil-normal-state-local-map (kbd "I") 'neotree-hidden-file-toggle)
