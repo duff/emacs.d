@@ -19,6 +19,7 @@
   "s" 'split-window-below-and-focus
   "d" 'neotree-toggle
   "n" 'neotree-show-then-find
+  "N" 'neotree-projectile-action
   "q" 'kill-buffer
   "g" 'browse-at-remote
   "q" (kbd ":q")
