@@ -41,8 +41,7 @@
   ",v" (lambda() (interactive)(projectile-find-file-in "views/"))
   ",c" (lambda() (interactive)(projectile-find-file-in "controllers/"))
   ",h" (lambda() (interactive)(projectile-find-file-in "helpers/"))
-  ",t" (lambda() (interactive)(projectile-find-file-in "test/"))
-  ",r" (lambda() (interactive)(projectile-find-file-in "spec/"))
+  ",t" 'projectile-find-test-file
   ",p" (lambda() (interactive)(projectile-find-file-in "presenters/"))
   ",o" (lambda() (interactive)(projectile-find-file-in "source/"))
   ",j" (lambda() (interactive)(projectile-find-file-in "javascripts/"))

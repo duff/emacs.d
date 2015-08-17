@@ -99,6 +99,16 @@
   (projectile-find-file)
   )
 
+(defun projectile-find-test-file ()
+  "Projectile find a file in the test or spec directory"
+  (interactive)
+  (if (file-exists-p "spec")
+    (projectile-find-file-in "spec/")
+  (projectile-find-file-in "test/"))
+  )
+
+
+
 (fset 'reply-to-email-in-clipboard
    [?v ?a ?e ?p ?g ?g ?\C-v ?G ?I ?> ?  escape ?v ?a ?e ?g ?q ?, ?h ?g ?g])
 
