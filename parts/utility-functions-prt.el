@@ -99,7 +99,7 @@
   (projectile-find-file)
   )
 
-(defun projectile-find-test-file ()
+(defun projectile-find-file-in-test ()
   "Projectile find a file in the test or spec directory"
   (interactive)
   (if (file-exists-p "spec")
@@ -107,7 +107,13 @@
   (projectile-find-file-in "test/"))
   )
 
-
+(defun projectile-find-file-in-view ()
+  "Projectile find a file in the views or web/templates directory"
+  (interactive)
+  (if (file-exists-p "mix.exs")
+    (projectile-find-file-in "web/templates/")
+  (projectile-find-file-in "views/"))
+  )
 
 (fset 'reply-to-email-in-clipboard
    [?v ?a ?e ?p ?g ?g ?\C-v ?G ?I ?> ?  escape ?v ?a ?e ?g ?q ?, ?h ?g ?g])
