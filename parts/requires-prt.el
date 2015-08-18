@@ -23,6 +23,6 @@
 (require 'saveplace)
 (require 'ag)
 (require 'browse-at-remote)
-
+(require 'web-mode)
 
 (provide 'requires-prt)

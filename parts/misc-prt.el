@@ -37,5 +37,8 @@
 ;; Allow this Emacs process to be a server for client processes.
 (server-start)
 
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
 
 (provide 'misc-prt)
+
+

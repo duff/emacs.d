@@ -32,3 +32,4 @@
 (depends-on "smex")
 (depends-on "writeroom-mode")
 (depends-on "yaml-mode")
+(depends-on "web-mode")
