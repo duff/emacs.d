@@ -6,6 +6,7 @@
 (setq projectile-enable-caching t)             ;; Cache the things
 (setq projectile-idle-timer-seconds 60)        ;; Regnerate tags when idle
 (setq projectile-sort-order (quote recentf))
+(setq projectile-switch-project-action 'neotree-projectile-switcheroo-callback)
 
 
 (setq projectile-project-root-files
@@ -17,6 +18,8 @@
   (when persp-show-modestring
     (setq persp-modestring
            (concat "[" (persp-name persp-curr) "]"))))
+
+
 
 
 (provide 'project-prt)

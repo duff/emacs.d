@@ -18,7 +18,7 @@
   "v" 'split-window-right-and-focus
   "s" 'split-window-below-and-focus
   "d" 'neotree-toggle
-  "n" 'neotree-show-then-find
+  "n" 'neotree-find-with-projectile
   "N" 'neotree-projectile-action
   "q" 'kill-buffer
   "g" 'browse-at-remote
@@ -61,7 +61,7 @@
 (define-key evil-normal-state-map "gh" (kbd "^"))     ;; Get to first non-blank char of line
 
 (define-key evil-normal-state-map "go" 'toggle-to-previous-buffer)
-(define-key evil-normal-state-map "gp" (lambda() (interactive)(persp-switch (persp-name persp-last))))
+(define-key evil-normal-state-map "gp" 'toggle-to-previous-perspective)
 
 ;; e is a text object for the entire buffer
 (define-key evil-outer-text-objects-map "e" 'mark-whole-buffer)

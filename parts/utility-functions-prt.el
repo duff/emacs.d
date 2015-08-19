@@ -62,22 +62,6 @@
   (flyspell-mode -1))
 
 
-(defun neotree-show-then-find ()
-  "Opening it first helps to keep the directory where it is."
-  (interactive)
-  (neo-global--open)
-  (neotree-find)
-  )
-
-(defun projectile-find-file-in (&optional prefix)
-  (interactive)
-  (let ((file (projectile-completing-read "Find file: "
-                                          (projectile-current-project-files)
-                                          prefix)))
-    (find-file (expand-file-name file (projectile-project-root)))
-    (run-hooks 'projectile-find-file-hook)))
-
-
 (defun split-window-below-and-focus ()
   "Split the window vertically and focus the new window."
   (interactive)
@@ -92,28 +76,10 @@
   (windmove-right)
   )
 
-(defun neotree-projectile-switcheroo ()
-  "Switch to a new project - update neotree and then do the default"
-  (interactive)
-  (neotree-projectile-action)
-  (projectile-find-file)
-  )
+(defun switch-to-previous-buffer ()
+      (interactive)
+      (switch-to-buffer (other-buffer (current-buffer) 1)))
 
-(defun projectile-find-file-in-test ()
-  "Projectile find a file in the test or spec directory"
-  (interactive)
-  (if (file-exists-p "spec")
-    (projectile-find-file-in "spec/")
-  (projectile-find-file-in "test/"))
-  )
-
-(defun projectile-find-file-in-view ()
-  "Projectile find a file in the views or web/templates directory"
-  (interactive)
-  (if (file-exists-p "mix.exs")
-    (projectile-find-file-in "web/templates/")
-  (projectile-find-file-in "views/"))
-  )
 
 (fset 'reply-to-email-in-clipboard
    [?v ?a ?e ?p ?g ?g ?\C-v ?G ?I ?> ?  escape ?v ?a ?e ?g ?q ?, ?h ?g ?g])

@@ -24,8 +24,6 @@
 
 (setq ag-reuse-window 't)
 
-(setq projectile-switch-project-action 'neotree-projectile-switcheroo)
-
 (setq ruby-insert-encoding-magic-comment nil)  ;; No magic #coding utf-8 line
 
 (add-hook 'focus-out-hook (lambda() (interactive)(save-some-buffers "t")))
@@ -38,6 +36,8 @@
 (server-start)
 
 (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.eex\\'" . web-mode))
+(setq web-mode-markup-indent-offset 2)
 
 (provide 'misc-prt)
 

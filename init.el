@@ -16,6 +16,7 @@
 (require 'evil-prt)
 (require 'misc-prt)
 (require 'utility-functions-prt)
+(require 'projectile-functions-prt)
 (require 'status-line-prt)
 (require 'project-prt)
 (require 'key-bindings-prt)
