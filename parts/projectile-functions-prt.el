@@ -31,7 +31,7 @@
 (defun projectile-find-file-in-test ()
   "Projectile find a file in the test or spec directory"
   (interactive)
-  (if (file-exists-p "spec")
+  (if (projectile-file-exists-p "spec")
     (projectile-find-file-in "spec/")
   (projectile-find-file-in "test/"))
   )
@@ -39,7 +39,7 @@
 (defun projectile-find-file-in-view ()
   "Projectile find a file in the views or web/templates directory"
   (interactive)
-  (if (file-exists-p "mix.exs")
+  (if (projectile-file-exists-p "mix.exs")
     (projectile-find-file-in "web/templates/")
   (projectile-find-file-in "views/"))
   )
