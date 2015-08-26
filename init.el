@@ -20,6 +20,7 @@
 (require 'status-line-prt)
 (require 'project-prt)
 (require 'key-bindings-prt)
+(require 'js-prt)
 
 (provide 'init)
 

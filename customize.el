@@ -10,7 +10,7 @@
  '(ansi-term-color-vector
    [unspecified "#181818" "#ab4642" "#a1b56c" "#f7ca88" "#7cafc2" "#ba8baf" "#7cafc2" "#d8d8d8"])
  '(cursor-in-non-selected-windows nil)
- '(custom-enabled-themes (quote (base16-atelierforest-dark)))
+ '(custom-enabled-themes (quote (base16-default-dark)))
  '(custom-safe-themes
    (quote
     ("9f3a4edb56d094366afed2a9ba3311bbced0f32ca44a47a765d8ef4ce5b8e4ea" "54a8c782a7a66e9aeb542af758f7f9f1a5702b956f425ffe15fccf5339f01f1e" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default)))

@@ -19,6 +19,7 @@
 (depends-on "evil-visualstar")
 (depends-on "ido-ubiquitous")
 (depends-on "flx-ido")
+(depends-on "js2-mode")
 (depends-on "key-chord")
 (depends-on "markdown-mode")
 (depends-on "neotree")
