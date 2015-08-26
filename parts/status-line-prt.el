@@ -8,7 +8,7 @@
  '("%e"
    (:eval
     (let* ((active (powerline-selected-window-active))
-	   (mode-line (if active 'mode-line 'mode-line-inactive))
+	   (mode-line (if active 'mode-line-inactive 'mode-line-inactive))
 	   (face1 (if active 'powerline-active1 'powerline-inactive1))
 	   (face2 (if active 'powerline-active2 'powerline-inactive2))
 	   (separator-left (intern (format "powerline-%s-%s"
@@ -22,8 +22,7 @@
 			(let ((backend (vc-backend buffer-file-name)))
 			  ))))
 	   (rhs (list (powerline-raw global-mode-string mode-line 'r)
-		      (powerline-raw "%l," mode-line 'l)
-		      (powerline-raw (format-mode-line '(10 "%c")))
+		      (powerline-raw "%l,%c  " mode-line 'l)
 		      (powerline-raw (replace-regexp-in-string  "%" "%%" (format-mode-line '(-3 "%p"))) mode-line 'r))))
       (concat (powerline-render lhs)
 	      (powerline-fill mode-line (powerline-width rhs))
