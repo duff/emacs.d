@@ -4,6 +4,7 @@
 (depends-on "ag")
 (depends-on "browse-at-remote")
 (depends-on "color-theme-sanityinc-solarized")
+(depends-on "base16-theme")
 (depends-on "elixir-mode")
 (depends-on "etags-select")
 (depends-on "evil")
