@@ -1,6 +1,7 @@
 
 (defun neotree-find-with-projectile ()
   (interactive)
+  (neotree-hide)
   (neotree-projectile-action)
   (switch-to-previous-buffer)
   (neotree-find)
