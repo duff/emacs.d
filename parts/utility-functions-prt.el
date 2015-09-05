@@ -80,6 +80,12 @@
       (interactive)
       (switch-to-buffer (other-buffer (current-buffer) 1)))
 
+;; (defun improved-visual-state ()
+;;       (interactive)
+;;       (evil-paste-last-insertion)
+;;       )
+
+
 
 (fset 'reply-to-email-in-clipboard
    [?v ?a ?e ?p ?g ?g ?\C-v ?G ?I ?> ?  escape ?v ?a ?e ?g ?q ?, ?h ?g ?g])

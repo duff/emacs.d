@@ -62,6 +62,9 @@
 (define-key evil-normal-state-map "go" 'toggle-to-previous-buffer)
 (define-key evil-normal-state-map "gp" 'toggle-to-previous-perspective)
 
+;; (define-key evil-normal-state-map "gj" 'goto-next-file-in-dir)
+;; (define-key evil-normal-state-map "gk" 'goto-previous-file-in-dir)
+
 ;; e is a text object for the entire buffer
 (define-key evil-outer-text-objects-map "e" 'mark-whole-buffer)
 
@@ -70,6 +73,10 @@
 (define-key evil-normal-state-map (kbd "k") 'evil-previous-visual-line)
 (define-key evil-visual-state-map (kbd "j") 'evil-next-visual-line)
 (define-key evil-visual-state-map (kbd "k") 'evil-previous-visual-line)
+
+;; Allow multiple visual pastes
+;; Haven't figured this out yet. :(
+;; (define-key evil-visual-state-map (kbd "p") 'improved-visual-state)
 
 ;; Bubble lines
 (define-key evil-normal-state-map (kbd "M-k") (kbd "ddkP"))
