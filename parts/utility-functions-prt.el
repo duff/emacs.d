@@ -24,16 +24,17 @@
   (ag/search regexp (ag/project-root default-directory) :regexp t))
 
 
-(defun uno-email-mode ()
+(defun uno-email-mode-on ()
   (interactive)
-  (find-file "~/code/scratch/email.txt")
   (mail-mode)
   (visual-line-mode t)
   (linum-mode -1)
   (setq writeroom-width 70)
   (writeroom-mode t)
   (flyspell-mode t)
-  (flyspell-buffer))
+  (flyspell-buffer)
+  (setq uno-email-mode t)
+  )
 
 (defun uno-email-mode-off ()
   (interactive)
@@ -42,7 +43,16 @@
   (visual-line-mode -1)
   (linum-mode t)
   (writeroom-mode -1)
-  (flyspell-mode -1))
+  (flyspell-mode -1)
+  (setq uno-email-mode nil)
+  )
+
+(defun toggle-uno-email-mode ()
+  (interactive)
+  (if uno-email-mode
+      (uno-email-mode-off)
+      (uno-email-mode-on)
+  ))
 
 
 (defun prose-mode-on ()

@@ -39,6 +39,8 @@
 (add-to-list 'auto-mode-alist '("\\.eex\\'" . web-mode))
 (setq web-mode-markup-indent-offset 2)
 
+(setq uno-email-mode nil)
+
 (provide 'misc-prt)
 
 
