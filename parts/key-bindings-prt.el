@@ -73,10 +73,7 @@
 (define-key evil-normal-state-map (kbd "k") 'evil-previous-visual-line)
 (define-key evil-visual-state-map (kbd "j") 'evil-next-visual-line)
 (define-key evil-visual-state-map (kbd "k") 'evil-previous-visual-line)
-
-;; Allow multiple visual pastes
-;; Haven't figured this out yet. :(
-;; (define-key evil-visual-state-map (kbd "p") 'improved-visual-state)
+(define-key evil-visual-state-map (kbd "p") 'repeatable-visual-paste)
 
 ;; Bubble lines
 (define-key evil-normal-state-map (kbd "M-k") (kbd "ddkP"))

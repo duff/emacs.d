@@ -96,11 +96,8 @@
       (neotree-enter)
       )
 
-;; (defun improved-visual-state ()
-;;       (interactive)
-;;       (evil-paste-last-insertion)
-;;       )
-
+(fset 'repeatable-visual-paste
+   [?P ?g ?v ?y ?g ?v ?v])
 
 
 (fset 'reply-to-email-in-clipboard
