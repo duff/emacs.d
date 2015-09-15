@@ -90,6 +90,12 @@
       (interactive)
       (switch-to-buffer (other-buffer (current-buffer) 1)))
 
+(defun neotree-collapse-node ()
+      (interactive)
+      (neotree-select-up-node)
+      (neotree-enter)
+      )
+
 ;; (defun improved-visual-state ()
 ;;       (interactive)
 ;;       (evil-paste-last-insertion)

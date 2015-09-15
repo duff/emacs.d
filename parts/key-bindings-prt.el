@@ -117,6 +117,7 @@
    (define-key evil-normal-state-local-map (kbd "mm") 'neotree-rename-node)
    (define-key evil-normal-state-local-map (kbd "I") 'neotree-hidden-file-toggle)
    (define-key evil-normal-state-local-map (kbd "C") 'neotree-change-root)
+   (define-key evil-normal-state-local-map (kbd "x") 'neotree-collapse-node)
 ))
 
 ;; Map ctrl-j/k to up down in ido selections
