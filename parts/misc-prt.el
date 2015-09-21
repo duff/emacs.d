@@ -35,11 +35,24 @@
 ;; Allow this Emacs process to be a server for client processes.
 (server-start)
 
+;; Don't include a newline between function definition and end
+(setq ruby-end-insert-newline nil)
+
+;; Hook in end mode to elixir
+(add-to-list 'elixir-mode-hook
+             (defun auto-activate-ruby-end-mode-for-elixir-mode ()
+               (set (make-variable-buffer-local 'ruby-end-expand-keywords-before-re)
+                    "\\(?:^\\|\\s-+\\)\\(?:do\\)")
+               (set (make-variable-buffer-local 'ruby-end-check-statement-modifiers) nil)
+               (ruby-end-mode +1)))
+
+
 (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.eex\\'" . web-mode))
 (setq web-mode-markup-indent-offset 2)
 
 (setq uno-email-mode nil)
+
 
 (provide 'misc-prt)
 

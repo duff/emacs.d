@@ -20,6 +20,7 @@
 (require 'evil-args)
 (require 'elixir-mode)
 (require 'ruby-mode)
+(require 'ruby-end)
 (require 'saveplace)
 (require 'ag)
 (require 'browse-at-remote)

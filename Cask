@@ -29,6 +29,7 @@
 (depends-on "projectile")
 (depends-on "projectile-rails")
 (depends-on "rainbow-mode")
+(depends-on "ruby-end")
 (depends-on "ruby-mode")
 (depends-on "sass-mode")
 (depends-on "smex")
