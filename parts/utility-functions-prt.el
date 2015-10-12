@@ -96,6 +96,12 @@
       (neotree-enter)
       )
 
+(fset 'move-to-next-file-in-neotree
+   [?, ?n ?j return ])
+
+(fset 'move-to-prev-file-in-neotree
+   [?, ?n ?k return ])
+
 (fset 'repeatable-visual-paste
    [?P ?g ?v ?y ?g ?v ?v])
 

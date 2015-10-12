@@ -62,6 +62,9 @@
 (define-key evil-normal-state-map "go" 'toggle-to-previous-buffer)
 (define-key evil-normal-state-map "gp" 'toggle-to-previous-perspective)
 
+(define-key evil-normal-state-map "gj" 'move-to-next-file-in-neotree)
+(define-key evil-normal-state-map "gk" 'move-to-prev-file-in-neotree)
+
 (define-key evil-normal-state-map "zg" 'flyspell-correct-word-before-point)
 
 ;; (define-key evil-normal-state-map "gj" 'goto-next-file-in-dir)
