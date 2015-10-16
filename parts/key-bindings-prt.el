@@ -17,8 +17,7 @@
   "w" 'save-buffer
   "v" 'split-window-right-and-focus
   "s" 'split-window-below-and-focus
-  "d" 'neotree-toggle
-  "n" 'neotree-show-file-in-directory
+  "n" 'dired-jump
   "q" 'kill-buffer
   "g" 'browse-at-remote
   "q" (kbd ":q")
@@ -62,9 +61,6 @@
 (define-key evil-normal-state-map "go" 'toggle-to-previous-buffer)
 (define-key evil-normal-state-map "gp" 'toggle-to-previous-perspective)
 
-(define-key evil-normal-state-map "gj" 'move-to-next-file-in-neotree)
-(define-key evil-normal-state-map "gk" 'move-to-prev-file-in-neotree)
-
 (define-key evil-normal-state-map "zg" 'flyspell-correct-word-before-point)
 
 ;; (define-key evil-normal-state-map "gj" 'goto-next-file-in-dir)
@@ -105,22 +101,6 @@
 ;; Make an arg text object act like a comma object
 (define-key evil-inner-text-objects-map "," 'evil-inner-arg)
 (define-key evil-outer-text-objects-map "," 'evil-outer-arg)
-
-(add-hook 'neotree-mode-hook
- (lambda ()
-   (define-key evil-normal-state-local-map (kbd "TAB") 'neotree-enter)
-   (define-key evil-normal-state-local-map (kbd "SPC") 'neotree-enter)
-   (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
-   (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)
-   (define-key evil-normal-state-local-map (kbd "ma") 'neotree-create-node)
-   (define-key evil-normal-state-local-map (kbd "md") 'neotree-delete-node)
-   (define-key evil-normal-state-local-map (kbd "mc") 'neotree-copy-node)
-   (define-key evil-normal-state-local-map (kbd "r") 'neotree-refresh)
-   (define-key evil-normal-state-local-map (kbd "mm") 'neotree-rename-node)
-   (define-key evil-normal-state-local-map (kbd "I") 'neotree-hidden-file-toggle)
-   (define-key evil-normal-state-local-map (kbd "C") 'neotree-change-root)
-   (define-key evil-normal-state-local-map (kbd "x") 'neotree-collapse-node)
-))
 
 ;; Map ctrl-j/k to up down in ido selections
 (add-hook 'ido-setup-hook

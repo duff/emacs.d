@@ -1,20 +1,6 @@
-(defun neotree-show-file-in-directory ()
-  (interactive)
-  (neotree-projectile-action)
-  (switch-to-previous-buffer)
-  (neotree-find)
-  )
-
-(defun neotree-projectile-after-switcheroo-callback ()
-  "After switching to a new project - update neotree"
-  (interactive)
-  (neotree-projectile-action)
-  (switch-to-previous-buffer)
-  )
 
 (defun toggle-to-previous-perspective ()
   (interactive)
-  (neotree-hide)
   (persp-switch (persp-name persp-last))
   )
 

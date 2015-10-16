@@ -5,8 +5,6 @@
 (setq projectile-idle-timer-seconds 60)        ;; Regnerate tags when idle
 (setq projectile-sort-order (quote recentf))
 
-(setq projectile-switch-project-hook 'neotree-projectile-after-switcheroo-callback)
-
 
 (setq projectile-project-root-files
       (quote ("Gemfile" "package.json" "gulpfile.js" "Gruntfile.js" "mix.exs" "README.md")))

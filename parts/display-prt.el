@@ -20,14 +20,6 @@
 scroll-conservatively 9999
 scroll-step 1)
 
-;; Remove noise from neotree
-(setq neo-show-updir-line nil)
-(setq neo-banner-message nil)
-(setq neo-theme 'arrow)
-(setq neo-mode-line-type 'none)
-;; (setq neo-window-width 30)
-;; (setq neo-modern-sidebar t)
-
 ;; Fix up parens
 (show-paren-mode t)
 (setq show-paren-delay 0)

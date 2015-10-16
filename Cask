@@ -22,7 +22,6 @@
 (depends-on "js2-mode")
 (depends-on "key-chord")
 (depends-on "markdown-mode")
-(depends-on "neotree")
 (depends-on "perspective")
 (depends-on "persp-projectile")
 (depends-on "powerline")
