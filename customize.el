@@ -13,7 +13,7 @@
  '(custom-enabled-themes (quote (base16-default-dark)))
  '(custom-safe-themes
    (quote
-    ("e5d605aad6552c6e09d96ad33e7c0e3b03d7156122f136b8b6b75a944d488768" "9f3a4edb56d094366afed2a9ba3311bbced0f32ca44a47a765d8ef4ce5b8e4ea" "54a8c782a7a66e9aeb542af758f7f9f1a5702b956f425ffe15fccf5339f01f1e" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default)))
+    ("0b6645497e51d80eda1d337d6cabe31814d6c381e69491931a688836c16137ed" "e5d605aad6552c6e09d96ad33e7c0e3b03d7156122f136b8b6b75a944d488768" "9f3a4edb56d094366afed2a9ba3311bbced0f32ca44a47a765d8ef4ce5b8e4ea" "54a8c782a7a66e9aeb542af758f7f9f1a5702b956f425ffe15fccf5339f01f1e" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default)))
  '(fci-rule-color "#073642")
  '(vc-annotate-background nil)
  '(vc-annotate-color-map
