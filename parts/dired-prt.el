@@ -9,4 +9,6 @@
 
 (setq dired-listing-switches "--group-directories-first -alh")
 
+(add-hook 'dired-mode-hook 'vinegar/dired-setup)
+
 (provide 'dired-prt)

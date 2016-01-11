@@ -17,6 +17,7 @@
 (require 'misc-prt)
 (require 'utility-functions-prt)
 (require 'projectile-functions-prt)
+(require 'dired-functions-prt)
 (require 'status-line-prt)
 (require 'project-prt)
 (require 'dired-prt)

@@ -118,6 +118,15 @@
 (define-key minibuffer-local-must-match-map [escape] 'minibuffer-keyboard-quit)
 (define-key minibuffer-local-isearch-map [escape] 'minibuffer-keyboard-quit)
 
+;; dired improvements
+(define-key dired-mode-map "j" 'vinegar/move-down)
+(define-key dired-mode-map "k" 'vinegar/move-up)
+(define-key dired-mode-map "-" 'vinegar/up-directory)
+(define-key dired-mode-map "I" 'vinegar/dotfiles-toggle)
+(define-key dired-mode-map "G" 'vinegar/jump-to-bottom)
+
+(key-chord-define dired-mode-map "gg" 'vinegar/back-to-top)
+
 
 (provide 'key-bindings-prt)
 
