@@ -19,6 +19,7 @@
 (require 'projectile-functions-prt)
 (require 'status-line-prt)
 (require 'project-prt)
+(require 'dired-prt)
 (require 'key-bindings-prt)
 (require 'js-prt)
 
