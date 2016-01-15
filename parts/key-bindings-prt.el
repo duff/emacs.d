@@ -124,6 +124,7 @@
 (define-key dired-mode-map "-" 'vinegar/up-directory)
 (define-key dired-mode-map "I" 'vinegar/dotfiles-toggle)
 (define-key dired-mode-map "G" 'vinegar/jump-to-bottom)
+(define-key dired-mode-map "a" 'find-file)
 
 (key-chord-define dired-mode-map "gg" 'vinegar/back-to-top)
 
