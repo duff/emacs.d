@@ -97,4 +97,17 @@
 (fset 'reply-to-email-in-clipboard
    [?v ?a ?e ?p ?g ?g ?\C-v ?G ?I ?> ?  escape ?v ?a ?e ?g ?q ?, ?h ?g ?g])
 
+
+(defun neotree-collapse-node ()
+    (interactive)
+    (neotree-select-up-node)
+    (neotree-enter))
+
+(fset 'move-to-next-file-in-neotree
+   [?, ?n ?j return ])
+
+(fset 'move-to-prev-file-in-neotree
+   [?, ?n ?k return ])
+
+
 (provide 'utility-functions-prt)

@@ -37,6 +37,13 @@ scroll-step 1)
 (blink-cursor-mode 0)                     ;; Turn off cursor blinking
 (set-face-background 'fringe "Black")     ;; Pretty up edge area near line numbers
 
+;; Remove noise from neotree
+(setq neo-show-updir-line nil)
+(setq neo-banner-message nil)
+(setq neo-theme 'arrow)
+(setq neo-mode-line-type 'none)
+(setq neo-window-width 34)
+
 ;; Pretty up line numbers
 (set-face-background 'linum "#1c1c1c")
 (set-face-foreground 'linum "#787C81")

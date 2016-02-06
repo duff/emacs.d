@@ -1,6 +1,7 @@
 
 (defun toggle-to-previous-perspective ()
   (interactive)
+  (neotree-hide)
   (persp-switch (persp-name persp-last))
   )
 

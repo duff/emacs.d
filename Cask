@@ -34,4 +34,5 @@
 (depends-on "smex")
 (depends-on "writeroom-mode")
 (depends-on "yaml-mode")
+(depends-on "neotree")
 (depends-on "web-mode")
