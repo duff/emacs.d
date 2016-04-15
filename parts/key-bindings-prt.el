@@ -50,6 +50,10 @@
   "F"   (lambda() (interactive)(projectile-find-file "t"))
   )
 
+(evil-leader/set-key-for-mode 'org-mode
+  "t"  'org-todo
+  )
+
 
 ;; Improved escape
 (key-chord-define evil-insert-state-map ";;" 'evil-normal-state)
