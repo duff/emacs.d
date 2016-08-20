@@ -11,7 +11,6 @@
 (depends-on "evil-args")
 (depends-on "evil-commentary")
 (depends-on "evil-indent-textobject")
-(depends-on "evil-jumper")
 (depends-on "evil-leader")
 (depends-on "evil-numbers")
 (depends-on "evil-matchit")

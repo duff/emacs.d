@@ -1,9 +1,7 @@
 (global-evil-visualstar-mode 1)
 (global-evil-leader-mode)
 (evil-leader/set-leader ",")
-(global-evil-jumper-mode)
 
-(setq evil-jumper-max-length 500)         ;; Remember more jumps
 (setq evil-flash-delay 0.4)               ;; Highlight searches for less time
 
 (setq evil-args-delimiters (quote (",")))
