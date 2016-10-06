@@ -5,12 +5,11 @@
   (persp-switch (persp-name persp-last))
   )
 
-
 (defun projectile-find-file-in (&optional prefix)
   (interactive)
   (let ((file (projectile-completing-read "Find file: "
                                           (projectile-current-project-files)
-                                          prefix)))
+                                          :initial-input prefix)))
     (find-file (expand-file-name file (projectile-project-root)))
     (run-hooks 'projectile-find-file-hook)))
 

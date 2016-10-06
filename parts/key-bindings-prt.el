@@ -37,6 +37,7 @@
 
   ",t" 'projectile-find-file-in-test
   ",v" 'projectile-find-file-in-view
+
   ",l" (lambda() (interactive)(projectile-find-file-in "lib/"))
   ",m" (lambda() (interactive)(projectile-find-file-in "models/"))
   ",c" (lambda() (interactive)(projectile-find-file-in "controllers/"))
