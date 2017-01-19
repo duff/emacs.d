@@ -5,7 +5,7 @@
 (add-to-list 'default-frame-alist '(height . 49))
 (add-to-list 'default-frame-alist '(width . 178))
 
-(set-frame-font "Inconsolata-dz 11")
+(set-frame-font "InconsolataDZ 11")
 
 ;; No menubar, toolbar, scrollbar
 (menu-bar-mode -1)
