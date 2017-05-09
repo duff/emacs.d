@@ -57,9 +57,9 @@
 
 
 ;; Improved escape
-(key-chord-define evil-insert-state-map ";;" 'evil-normal-state)
-(key-chord-define evil-visual-state-map ";;" 'evil-change-to-previous-state)
-(key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
+;; (key-chord-define evil-insert-state-map ";;" 'evil-normal-state)
+;; (key-chord-define evil-visual-state-map ";;" 'evil-change-to-previous-state)
+;; (key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
 
 (define-key evil-normal-state-map "gl" (kbd "g_"))    ;; Get to end of line
 (define-key evil-normal-state-map "gh" (kbd "^"))     ;; Get to first non-blank char of line
